@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Document</title>
+</head>
+<style>
+    @keyframes ani1
+    {
+        10%{left:0%;}
+        20%{left:0%;}
+
+        30%{left:-18%;}
+        40%{left:-18%;}
+
+        50%{left:-36%;}
+        60%{left:-36%;}
+
+        70%{left:-54%;}
+        80%{left:-54%;}
+
+        90%{left:-72%;}
+        100%{left:-72%;}
+
+    }
+
+   
+body
+{
+    margin:0px;
+    padding:0px;
+   overflow-x: hidden;
+   
+
+}
+header
+{
+    width:600%;
+    height:600px;
+    margin:auto;
+   
+}
+.pic
+{
+width:18%;
+height:300px;
+position:relative;
+top:0px;
+margin-left:-10px;
+box-shadow:10px 10px 10px gray;
+animation:ani1 32s infinite;
+
+}
+
+#mask
+{
+   overflow:hidden;
+   margin:auto;width:90%;height:600px;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width:600px)
+ {
+    header{display:block}
+body{background:red}
+  .pic{height:100px;}
+   #mask{height:100px;background:green;margin-top:10px;}
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width:600px) 
+{
+
+body{background:green}
+   .pic{height:300px;}
+   #mask{height:400px;background:green;}
+}
+
+
+
+
+@media only screen and (min-width: 768px) 
+{
+   body{background:yellow}
+    .pic{height:400px;}
+   #mask{height:400px;background:green;}
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px)
+ {
+body{background:rgb(60, 64, 171)}
+ .pic{height:600px;}
+   #mask{height:600px;background:green;}
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) 
+{
+
+body{background:rgb(97, 3, 70)}
+ .pic{height:900px;}
+   #mask{height:900px;background:green;}
+
+
+} 
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+
+    <div id="mask" >
+
+    <header>
+        
+  <img src="images/p4.jpg" class="pic">
+  <img src="images/p5.jpg" class="pic" >
+  <img src="images/p6.jpg" class="pic" >
+  <img src="images/p7.jpg" class="pic" >
+  <img src="images/p8.jpg" class="pic">
+    </header>
+
+
+</div> 
+
+
+</body>
+</html>
