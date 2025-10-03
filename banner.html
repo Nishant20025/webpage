@@ -25,26 +25,38 @@ height:100%;
 <h1>creating animated banner by getelement() in js</h1>    
 -->
 <div id="banner">
-    <img id="pic" src="images/p1.jpg"
+    
+  <img id="pic" src="images/p1.jpg">
+
 </br>
-<button oneclick="next()">🔜</button>
-<button oneclick="prev()" style="margin-left:90%">🔙</button>
+<button onclick="next()">🔜</button>
+
+<button onclick="prev()" style="margin-left:80%">🔙</button>
 <script>
-var p = document.getelementbyid("pic")
+var p = document.getElementById("pic")
+
 var c = 1
 function changepic( )
 {
 p.src="images/p"+c+".jpg"
 document.title= c
 }
+
+
+
+
 function next()
 {
+ 
     if(c<10)
-{
+    {
     c++
+    }
+    changepic( )
 }
-changepic( )
-}
+
+
+
 function prev()
 {
     if(c>1)
@@ -53,9 +65,13 @@ function prev()
 }
 changepic( )
 }
+
+
+document.title="No Error"
 </script>
 </div>
 </body>
 </head>
 
 </html>
+
