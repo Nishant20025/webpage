@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>working with array</h1>
+    <button onclick ="ch()">change backgrpond color</button>
+    <script>
+    var mycolor=["red","green","orange","cyan","magenta"]
+    //alert(mycolor)
+    //document.title=mycolor[3]
+    //document.bgcolor=mycolor[2]
+    // alert(mycolor.length)
+    var c=0
+    function ch()
+    {
+        if(c<mycolor.length)
+    {
+        document.body.style.background=mycolor[c]
+        c++
+    }
+    else
+    {
+        c=0
+    }
+    document.title=c
+    }
+
+
+</script>
+</body>
+</html>
