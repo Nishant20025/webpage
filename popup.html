@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lamg="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>document</title>
+</head>
+<style>
+ .addstyle
+ {
+    width:300px;
+    height:400px;
+    box-shadow:10px 10px 10px gray;
+    text-align:center;
+    padding:5px;
+    position:absolute;
+    left:30%;
+    top:20%;
+    background:rgb(217, 217, 22);
+ }
+</style>
+<body>
+  <script>
+  var add=document.createElement("div")
+  add.className="addstyle"
+  var mx=0
+  var my=0
+  function showadd()
+  {
+    add.style.left=mx-100+"px"
+    add.style.right=my-100+"px"
+    document.body.appenchild(add)
+  }
+  add.onclick=function()
+  {
+    //redirection
+    location.href="http://amazon.in"
+  }
+  add.innerhtml="<button onclick='margin-left:250px;margin-top:10px;'>X</button> <h1>sale on Amazon</h1>"
+  add.innerHTML+="<hr color='green' size='4'/>"
+  add.innerHTML+="<img src='images/amazon.gif'>"
+  function closeadd()
+  {
+    document.body.removechild(add)
+  }
+  setTimeout("shadow()",5000)
+  setTimeout("closeadd()",10000)
+  function f1(event)
+  {
+    mx=event.pageX
+    my=event.pageY
+    document.title="x="+event.page+"y="+event.pageY
+  }
+  document.addeventlistener("mousemove",f1)
+  
+  </script>
+</body>
+</html>
