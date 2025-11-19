@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    header{
+        text-align:center;
+    }
+    .pic
+{
+    width:70%;
+    height:500px;
+    box-shadow:10px 10px 10px gray;
+    margin:auto;
+    display: block;
+}
+</style>
+<body>
+    <header>
+        <h1 id="mes">Image of The Day</h1>
+        <img id="pic" class="pic" src="images/p1.jpg">
+    </header>
+    <script>
+      var p =  document.getElementById("pic")
+      var m =  document.getElementById("mes")
+      var d = new Date()
+      var today = d.getDay()
+      //Switch statement
+
+      switch(today)
+      {
+        case 1:
+        p.src="images/p1.jpg"
+        m.innerHTML+= "Wednesday"
+        document.bgColor="cyan"
+        break;
+
+         case 2:
+        p.src="images/p2.jpg"
+        m.innerHTML+= "Thursday"
+        document.bgColor="cyan"
+        break;
+        
+         case 3:
+        p.src="images/p3.jpg"
+        m.innerHTML+= "Friday"
+        document.bgColor="cyan"
+        break;
+        
+         case 4:
+        p.src="images/p4.jpg"
+        m.innerHTML+= "Saturday"
+        document.bgColor="cyan"
+        break;
+        
+         case 5:
+        p.src="images/p5.jpg"
+        m.innerHTML+= "Sunday"
+        document.bgColor="cyan"
+        break;
+        
+         case 6:
+        p.src="images/p6.jpg"
+        m.innerHTML+= "Monday"
+        document.bgColor="cyan"
+        break;
+        
+         case 7:
+        p.src="images/p7.jpg"
+        m.innerHTML+= "Tuesday"
+        document.bgColor="cyan"
+        break;
+
+
+        default:
+   
+      }
+    </script>
+</body>
+</html>

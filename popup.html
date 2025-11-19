@@ -1,58 +1,84 @@
 <!DOCTYPE html>
-<html lamg="en">
+<html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <style>
- .addstyle
- {
-    width:300px;
-    height:400px;
-    box-shadow:10px 10px 10px gray;
-    text-align:center;
-    padding:5px;
-    position:absolute;
-    left:30%;
-    top:20%;
-    background:rgb(217, 217, 22);
- }
+    .addstyle
+    {
+        width:300px;
+        height:400px;
+        box-shadow:10px 10px 10px gray;
+        text-align:center;
+        padding:5px;
+        position:absolute;
+        left:30%;
+        top:20%;
+        background:rgb(217, 227, 22);
+    }
 </style>
 <body>
-  <script>
-  var add=document.createElement("div")
-  add.className="addstyle"
-  var mx=0
-  var my=0
-  function showadd()
-  {
-    add.style.left=mx-100+"px"
-    add.style.right=my-100+"px"
-    document.body.appenchild(add)
-  }
-  add.onclick=function()
-  {
-    //redirection
-    location.href="http://amazon.in"
-  }
-  add.innerhtml="<button onclick='margin-left:250px;margin-top:10px;'>X</button> <h1>sale on Amazon</h1>"
-  add.innerHTML+="<hr color='green' size='4'/>"
-  add.innerHTML+="<img src='images/amazon.gif'>"
-  function closeadd()
-  {
-    document.body.removechild(add)
-  }
-  setTimeout("shadow()",5000)
-  setTimeout("closeadd()",10000)
-  function f1(event)
-  {
-    mx=event.pageX
-    my=event.pageY
-    document.title="x="+event.page+"y="+event.pageY
-  }
-  document.addeventlistener("mousemove",f1)
-  
-  </script>
+     <audio id="mysound">
+     <source> src="media/wave.wav">
+
+
+    </audio>
+   
+    <script>
+        var add = document.createElement("div")
+        var s = document.getElementById("mysound")
+
+        add.className="addstyle"
+        var mx = 0
+        var my = 0
+        function showadd()
+        {
+            add.style.left = mx-100+"px"
+            add.style.top = my-100+"px"
+            s.play()
+            document.body.style.background="black"
+
+            document.body.appendChild(add)
+        }
+            add.oneclick= function()
+            {
+                // Redirection
+                location.href="http://amazon.in"
+            
+            }
+            add.innerHTML="<button onclick = 'closeadd()' style='margin-left:250px;margin-top:10 button> <h1> Big Sale on Amazon</h1>"
+            add.innerHTML+="<hr color='green' size='4'/>"
+            add.innerHTML+="<img src='images/gif.gif'>"
+
+            function closeadd()
+            {
+                document.body.removeChild(add)
+               document.body.style.background="white"
+            }
+
+
+            setTimeout("showadd()",5000)
+            setTimeout("closeadd()",10000)
+
+            function f1(event)
+            {
+                mx=event.pageX
+                my=event.pageY
+            
+                dopcument.title = "x = "+event.pageX+" y = "+event.pageY
+            }
+                document.addEvent.addEventListener("mousemove",f1)
+            
+    </script>
+    <h1>About Amazone</h1>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </p>
+    
 </body>
 </html>
